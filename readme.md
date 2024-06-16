@@ -13,12 +13,13 @@ This project is a simple Python script for sending emails using yagmail. It allo
 2. Install the required dependencies:
 
    ```sh
-   pip install yagmail python-dotenv
+   pip install yagmail keyring
    ```
 
 3. Set up your email address and app password:
 
-   Run the script for the first time. It will prompt you to enter your email address and app password. This information will be saved securely in a .env file.
+   Run the script for the first time.
+   It will prompt you to enter your email address and app password. This information will be saved securely in a .env file.
    Note: Make sure to enable "Less secure app access" in your Gmail settings and use an app password for security.
 
 4. Run the script:
