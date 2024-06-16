@@ -17,7 +17,6 @@ def send_email(to_address, attachment_path, body):
             contents=body,
             attachments=attachment_path
         )
-        # \033[92m is the ANSI escape code for green color
         print("\033[92mEmail sent successfully!\033[0m")
     except Exception as e:
         print(f"Failed to send email: {e}")
@@ -43,12 +42,12 @@ def main():
     try:
         while True:
             to_address = input("Enter the recipient's email address: ")
-            print("\nEmail content:")
-            print(body)
-            confirm = input(
-                f"\nSend this email to {to_address}? (y/n): ").strip().lower()
-            if confirm == 'y':
-                send_email(to_address, attachment_path, body)
+            # print("\nEmail content:")
+            # print(body)
+            # confirm = input(
+            #     f"\nSend this email to {to_address}? (y/n): ").strip().lower()
+            # if confirm == 'y':
+            send_email(to_address, attachment_path, body)
 
             # Loop back to the email input step
             print("Enter another recipient's email address or press Ctrl+C to exit.")
